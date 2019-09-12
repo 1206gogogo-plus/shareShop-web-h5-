@@ -282,7 +282,7 @@ export default {
         padding-top:10px;
         .ad-swipe-menu{
             height:150px;
-            background-color:#f5f5f;
+            background-color:#f5f5f5;
             .ad-img{
                 height:150px;
                 width:100%;
