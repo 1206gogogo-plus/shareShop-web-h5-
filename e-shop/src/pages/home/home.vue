@@ -63,16 +63,16 @@
 
                 </div>
             </panel-with-title>
-
+            <!-- 首页On Sale -->
              <panel-with-title bold-title title="On Sale">
                 <div slot="main">
-                    促销商品区
+                    <on-sale></on-sale>
                 </div>
             </panel-with-title>
 
              <panel-with-title bold-title title="New Arrival">
                 <div slot="main">
-                    新品区
+                    <new-arrival></new-arrival>
                 </div>
             </panel-with-title>
 
@@ -115,6 +115,8 @@ import coupon from '@/components/home/coupon';
 
 import categoryListDetailItem from '@/components/home/sub-pages/base-components/category/category-list-detail-item'; 
 import hotSale from '@/components/home/sub-pages/hot-sale';
+import onSale from '@/components/home/sub-pages/on-sale';
+import newArrival from '@/components/home/sub-pages/new-arrival';
 
 const categoryPanel=()=>import('@/pages/home/category-panel');
 const searchPanel=()=>import('@/pages/search/search');
@@ -129,6 +131,8 @@ export default {
     
     //panel
         hotSale,
+        onSale,
+        newArrival,
 
     //pages
         categoryPanel,

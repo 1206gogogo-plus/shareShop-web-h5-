@@ -15,6 +15,8 @@ const addAddress=()=>import('@/pages/user/user-add-address');
 
 
 const hotsale=()=>import('@/pages/home/hot-sale');
+const onsale=()=>import('@/pages/home/on-sale');
+const newArrival=()=>import('@/pages/home/new-arrival')
 const search=()=>import('@/pages/search/search');
 const login=()=>import('@/pages/user/login');
 const register=()=>import('@/pages/user/register');
@@ -61,6 +63,16 @@ export default new Router({
       name:'hotsale',
       path:'/hotsale',
       component:hotsale,
+    },
+    {
+      name:'onsale',
+      path:'/onsale',
+      component:onsale
+    },
+    {
+      name:'newArrival',
+      path:'/newArrival',
+      component:newArrival
     },
     {
       name:'login',
