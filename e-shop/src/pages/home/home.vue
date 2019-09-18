@@ -16,8 +16,8 @@
         
             <category-panel v-model="visibility.category"></category-panel>
            
-
-          <div :class="'main-area '+(!scrolled?'is-scrolled':'panel-with-nav-bar')">
+            <van-pull-refresh v-model="isLoading" @refresh="onRefresh">
+            <div :class="'main-area '+(!scrolled?'is-scrolled':'panel-with-nav-bar')">
 
             
               <!--轮播图-->
@@ -78,7 +78,7 @@
 
 
           </div>
-         
+         </van-pull-refresh>
          <div style="height:1200px;"></div>
          <!-- <div class="panel-with-nav-bar">
 
@@ -150,6 +150,7 @@ export default {
             categorySwipeData:[], 
             couponsData:[],
             proRecommand:{},    //存放所有推荐的商品
+            isLoading:false,
         }
     },
     mounted:function(){
@@ -239,7 +240,13 @@ export default {
         goToProductItem:function(val){
             //console.log(this.productData.productId);
             this.$router.push({name:'product',params:{id:val}});
-        }
+        },
+        onRefresh() {
+            setTimeout(() => {
+            //this.$toast('refresh done', 100); 需要改变toast的时间
+            this.isLoading = false;
+            }, 500);
+        },
 
     }
 }

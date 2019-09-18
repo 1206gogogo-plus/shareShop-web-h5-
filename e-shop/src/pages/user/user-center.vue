@@ -130,7 +130,8 @@ export default {
             this.$router.push({name:'getcoupons'});
         },
         getAllOrders(){
-            console.log("getAllOrders");
+            this.$router.push({name:'getAllOrders'});
+            console.log("getAllOrders页面待实现");
         },
         waitForPayment(){
             console.log("waitForPayment页面待实现");
@@ -143,7 +144,7 @@ export default {
             console.log("waitForGoods页面待实现");
         },
         evaluationOfGoods(){
-            console.log("evaluationOfGoods页面待实现");
+            this.$router.push({name:'evaluationOfGoods'});
         },
         refundAndAftersales(){
              console.log("refundAndAftersales页面待实现");

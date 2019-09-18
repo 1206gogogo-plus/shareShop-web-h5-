@@ -10,6 +10,8 @@ const mine=()=>import('@/pages/user/user-center');
 const editmsg=()=>import('@/pages/user/user-editmsg');
 const getcoupons=()=>import('@/pages/user/user-getcoupons');
 const getfavorites=()=>import('@/pages/user/user-getfavorites');
+const getAllOrders=()=>import('@/pages/user/user-getallorders');
+const evaluationOfGoods=()=>import('@/pages/user/user-evaluation');
 const addressManager=()=>import('@/pages/user/user-address');
 const addAddress=()=>import('@/pages/user/user-add-address');
 
@@ -137,6 +139,22 @@ export default new Router({
       path:'/addAddress',
       name:'addAddress',
       component:addAddress,
+      meta:{
+        requiredAuth:true,
+      }
+    },
+    {
+      path:'/evaluationOfGoods',
+      name:'evaluationOfGoods',
+      component:evaluationOfGoods,
+      meta:{
+        requireAuth:true,
+      }
+    },
+    {
+      path:'/getAllOrders',
+      name:'getAllOrders',
+      component:getAllOrders,
       meta:{
         requiredAuth:true,
       }
